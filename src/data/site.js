@@ -19,8 +19,8 @@ import {
 } from 'lucide-react';
 
 export const CONTACT = {
-  whatsappDisplay: '+92 321 2411667',
-  whatsappBase: 'https://wa.me/923212411667',
+  whatsappDisplay: '+92 319 0117384',
+  whatsappBase: 'https://wa.me/92319011738',
   email: 'craftwavedigital@gmail.com',
   website: 'craftwave.digital',
 };
