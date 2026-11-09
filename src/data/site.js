@@ -20,7 +20,7 @@ import {
 
 export const CONTACT = {
   whatsappDisplay: '+92 319 0117384',
-  whatsappBase: 'https://wa.me/92319011738',
+  whatsappBase: 'https://wa.me/923190117384',
   email: 'craftwavedigital@gmail.com',
   website: 'craftwave.digital',
 };
