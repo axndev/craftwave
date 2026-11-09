@@ -1,3 +1,4 @@
+
 import {
   Building2,
   ShoppingCart,
@@ -11,6 +12,10 @@ import {
   ShieldCheck,
   Wallet,
   Gauge,
+  Bot,
+  Workflow,
+  Search,
+  Headset,
 } from 'lucide-react';
 
 export const CONTACT = {
@@ -24,61 +29,78 @@ export const wa = (message) =>
   `${CONTACT.whatsappBase}?text=${encodeURIComponent(message)}`;
 
 export const WA_DEFAULT = wa(
-  'Hi Craftwave Digital, I would like to discuss a website for my business.'
+  'Hi Craftwave Digital, I would like to discuss how your digital solutions can help my business grow.'
 );
 
 export const WA_PORTFOLIO = wa(
-  'Hi Craftwave Digital, can you share more examples from your portfolio?'
+  'Hi Craftwave Digital, I would like to see more of your work and portfolio.'
 );
 
 export const WA_QUOTE = wa(
-  'Hi Craftwave Digital, I would like a quote for a website project.'
+  'Hi Craftwave Digital, I would like a free consultation and quote for my project.'
+);
+
+export const WA_AI = wa(
+  'Hi Craftwave Digital, I am interested in adding an AI chatbot to my business website.'
 );
 
 export const whyWebsite = [
-  'Make a strong first impression.',
-  'Build credibility and customer trust.',
-  'Showcase your services and previous work.',
-  'Receive enquiries directly from potential customers.',
-  'Make it easier for customers to contact you.',
+  'Build credibility and make a professional first impression.',
+  'Turn website visitors into potential customers.',
+  'Showcase your products, services, and expertise.',
+  'Make it easier for customers to contact your business.',
+  'Stay accessible to potential customers around the clock.',
+  'Create a digital foundation that grows with your business.',
 ];
 
 export const services = [
   {
     title: 'Business Websites',
-    desc: 'Professional websites for companies, startups, consultants, and service providers.',
+    desc: 'Professional, conversion-focused websites that establish credibility, showcase your services, and help attract new customers.',
     icon: Building2,
-    spec: 'Brand / Trust',
+    spec: 'Grow your business',
   },
   {
-    title: 'E-commerce Websites',
-    desc: 'Online stores with product pages, shopping carts, payment integrations, and order management.',
+    title: 'E-commerce Solutions',
+    desc: 'Powerful online stores with product management, secure checkout, payment integrations, and streamlined order management.',
     icon: ShoppingCart,
     spec: 'Sell online',
   },
   {
-    title: 'WordPress Websites',
-    desc: 'Custom WordPress websites with easy content management and flexible functionality.',
-    icon: Layers,
-    spec: 'Self-managed',
+    title: 'AI Chatbots & Assistants',
+    desc: 'AI-powered website assistants that answer customer questions, provide information, capture enquiries, and support your business around the clock.',
+    icon: Bot,
+    spec: '24/7 assistance',
   },
   {
     title: 'Landing Pages',
-    desc: 'Conversion-focused landing pages for advertising campaigns, products, and services.',
+    desc: 'High-converting landing pages designed for advertising campaigns, lead generation, product launches, and service promotions.',
     icon: Rocket,
-    spec: 'Conversion',
+    spec: 'Generate leads',
   },
   {
     title: 'Custom Web Applications',
-    desc: 'Tailored web solutions, dashboards, booking systems, and interactive applications.',
+    desc: 'Tailored digital platforms, dashboards, booking systems, portals, and interactive applications built around your workflow.',
     icon: LayoutDashboard,
-    spec: 'Built to spec',
+    spec: 'Custom solutions',
   },
   {
-    title: 'Website Redesign',
-    desc: 'Give your existing website a modern look, better user experience, and improved mobile responsiveness.',
+    title: 'Website Redesign & Optimization',
+    desc: 'Transform outdated websites with modern design, better user experiences, improved responsiveness, and performance enhancements.',
     icon: RefreshCw,
-    spec: 'Rebuild',
+    spec: 'Modernize your site',
+  },
+  {
+    title: 'WordPress & WooCommerce',
+    desc: 'Flexible WordPress websites and WooCommerce stores that you can manage, update, and scale without technical complexity.',
+    icon: Layers,
+    spec: 'Flexible management',
+  },
+  {
+    title: 'Business Automation',
+    desc: 'Connect forms, websites, CRMs, booking systems, and third-party tools to reduce repetitive tasks and streamline operations.',
+    icon: Workflow,
+    spec: 'Work smarter',
   },
 ];
 
@@ -168,89 +190,108 @@ export const projects = [
 export const whyUs = [
   {
     icon: Target,
-    title: 'Business-focused approach',
-    desc: 'We understand that your website should support your business goals, not just look attractive.',
+    title: 'Focused on business growth',
+    desc: 'We create digital experiences with clear business objectives: building trust, generating enquiries, and helping businesses grow.',
   },
   {
     icon: Smartphone,
-    title: 'Modern and responsive design',
-    desc: 'Your website will be designed to work smoothly across mobile phones, tablets, and desktops.',
+    title: 'Designed for every screen',
+    desc: 'Every website is built with responsive layouts and a smooth experience across mobile phones, tablets, and desktops.',
   },
   {
-    icon: Gauge,
-    title: 'Built around your requirements',
-    desc: 'We discuss your business, audience, and goals before deciding on the right solution.',
+    icon: Bot,
+    title: 'AI-powered solutions',
+    desc: 'We combine modern web development with practical AI integrations to help businesses improve customer communication.',
   },
   {
     icon: MessagesSquare,
     title: 'Direct communication',
-    desc: 'Work directly with the developer throughout the project.',
+    desc: 'Work directly with the developer. Discuss your requirements, receive updates, and stay involved throughout the project.',
   },
   {
     icon: ShieldCheck,
-    title: 'Reliable support',
-    desc: 'We help with website setup, testing, launch, and agreed post-launch support.',
+    title: 'Quality you can rely on',
+    desc: 'We focus on functionality, testing, performance, and a smooth launch, with agreed post-launch support.',
   },
   {
     icon: Wallet,
     title: 'Transparent pricing',
-    desc: "You'll know the project scope and cost before development begins.",
+    desc: 'Clear project scopes, straightforward pricing, and agreed milestones before development begins.',
   },
 ];
 
 export const pricing = [
   {
     name: 'Starter Website',
-    price: 'Starting at PKR 15,000',
-    desc: 'Ideal for individuals, small businesses, and startups.',
+    price: 'PKR 15,000',
+    priceNote: 'Starting price',
+    desc: 'Everything a small business needs to establish a professional online presence.',
     features: [
-      'Up to 5 pages',
+      'Up to 5 website pages',
       'Professional responsive design',
-      'Contact form',
+      'Contact and enquiry form',
       'WhatsApp integration',
       'Basic on-page SEO setup',
-      'Social media links',
+      'Social media integration',
+      'Basic website security setup',
+      'Launch assistance',
     ],
     cta: 'Get started',
     featured: false,
   },
   {
-    name: 'Business Website',
-    price: 'Starting at PKR 20,000',
-    desc: 'For businesses that need a more complete online presence.',
+    name: 'Business Growth',
+    price: 'PKR 20,000',
+    priceNote: 'Starting price',
+    desc: 'A more complete digital presence designed to help businesses attract and engage customers.',
     features: [
-      'Up to 10 pages',
-      'Customised website design',
-      'Mobile and tablet optimisation',
-      'Contact and enquiry forms',
+      'Up to 10 website pages',
+      'Customized website design',
+      'Mobile and tablet optimization',
+      'Contact and lead generation forms',
       'WhatsApp integration',
+      'Basic AI chatbot setup included',
       'Basic on-page SEO setup',
       'Social media integration',
+      'Launch assistance',
     ],
     cta: 'Choose business',
     featured: true,
   },
   {
-    name: 'E-commerce Website',
+    name: 'E-commerce Store',
     price: 'Custom pricing',
-    desc: 'For businesses looking to sell products online.',
+    priceNote: 'Based on requirements',
+    desc: 'Launch an online store with the essential tools to manage products and receive orders.',
     features: [
-      'WooCommerce setup',
+      'WooCommerce store setup',
       'Product and category pages',
       'Shopping cart and checkout',
       'Payment gateway integration where supported',
       'Order management',
-      'Responsive design',
+      'WhatsApp integration',
+      'Responsive store design',
+      'Store launch assistance',
     ],
-    cta: 'Discuss my store',
+    cta: 'Build my store',
     featured: false,
   },
   {
-    name: 'Custom Projects',
-    price: "Let's discuss your requirements",
-    desc: 'For web applications, booking systems, dashboards, custom functionality, and advanced integrations.',
-    features: [],
-    cta: 'Brief us on your project',
+    name: 'Custom Digital Solutions',
+    price: 'Custom pricing',
+    priceNote: 'Tailored to your business',
+    desc: 'Advanced solutions for businesses that need more than a standard website.',
+    features: [
+      'Custom web applications',
+      'AI chatbots and assistants',
+      'Booking and appointment systems',
+      'Business dashboards and portals',
+      'API and third-party integrations',
+      'Workflow automation',
+      'Custom functionality',
+      'Ongoing support options',
+    ],
+    cta: 'Discuss my project',
     featured: false,
   },
 ];
@@ -259,69 +300,110 @@ export const steps = [
   {
     n: '01',
     title: 'Tell us about your business',
-    desc: 'Share your business details, website requirements, and goals.',
+    desc: 'Share your business, target audience, goals, and what you want to achieve.',
   },
   {
     n: '02',
-    title: 'Get your project quote',
-    desc: "We'll discuss the scope, timeline, and estimated cost.",
+    title: 'Get a free consultation',
+    desc: 'We discuss your requirements, recommend the right solution, and provide a transparent quote.',
   },
   {
     n: '03',
     title: 'Design & development',
-    desc: 'We build your website and keep you updated throughout the process.',
+    desc: 'We design and build your solution while keeping you updated throughout the process.',
   },
   {
     n: '04',
     title: 'Review & launch',
-    desc: 'Review the completed website, request agreed revisions, and launch your website.',
+    desc: 'Review the finished project, complete agreed revisions, and take your digital presence live.',
   },
 ];
 
 export const faqs = [
   {
     q: 'How much does a website cost?',
-    a: 'Our website projects start from PKR 15,000. The final price depends on the number of pages, design, and functionality.',
+    a: 'Our website packages start at PKR 15,000 for a starter website and PKR 20,000 for a business website. E-commerce stores and custom projects are priced according to their requirements.',
   },
   {
     q: 'How long does it take to build a website?',
-    a: 'A standard business website may take around 5–10 working days, depending on the scope and how quickly content and feedback are provided.',
+    a: 'A standard website can typically be completed within 5–10 working days, depending on its scope, content availability, and feedback. More complex projects may require additional time.',
+  },
+  {
+    q: 'Do you offer AI chatbot integration?',
+    a: 'Yes. We build AI-powered website assistants that can answer frequently asked questions, provide business information, and help capture customer enquiries. Basic chatbot setup is included in our Business Growth package. Third-party API or usage charges, if applicable, are separate.',
   },
   {
     q: 'Will my website work on mobile phones?',
-    a: 'Yes. We build responsive websites designed for mobile, tablet, and desktop screens.',
+    a: 'Yes. Our websites are designed to work across mobile phones, tablets, laptops, and desktop screens.',
   },
   {
     q: 'Can I update my website myself?',
-    a: 'Yes. WordPress websites can be managed through an admin dashboard, allowing you to update text, images, and other content.',
+    a: 'Yes. WordPress websites include an admin dashboard where you can manage text, images, products, and other content without needing a developer.',
+  },
+  {
+    q: 'Do you provide e-commerce solutions?',
+    a: 'Yes. We develop WooCommerce stores with product management, shopping carts, checkout, order management, and supported payment integrations.',
   },
   {
     q: 'Do you provide website maintenance?',
-    a: 'Yes. Maintenance and ongoing support can be discussed according to your requirements.',
+    a: 'Yes. Ongoing maintenance, updates, backups, and technical support can be arranged according to your requirements.',
   },
   {
-    q: 'Do I need to pay everything upfront?',
-    a: 'Payment milestones will be agreed before the project begins.',
+    q: 'What is your payment process?',
+    a: 'Payment milestones are agreed before the project begins. We share the project scope, cost, and timeline before starting development.',
   },
   {
     q: 'Can you redesign my existing website?',
-    a: 'Yes. We can redesign existing websites, improve their layout, and update their functionality.',
+    a: 'Absolutely. We can modernize your existing website, improve its layout, responsiveness, user experience, and functionality.',
+  },
+  {
+    q: 'Do you work with businesses internationally?',
+    a: 'Yes. We work remotely with businesses and clients across different locations. Project communication and delivery can be handled online.',
   },
 ];
 
 export const serviceOptions = [
   'Business website',
-  'E-commerce website',
-  'WordPress website',
+  'E-commerce store',
+  'AI chatbot / AI assistant',
   'Landing page',
   'Custom web application',
+  'WordPress / WooCommerce',
   'Website redesign',
+  'Business automation',
   'Not sure yet',
 ];
 
 export const budgetOptions = [
+  'Under PKR 15,000',
   'PKR 15,000 – 20,000',
   'PKR 20,000 – 40,000',
-  'PKR 40,000+',
+  'PKR 40,000 – 75,000',
+  'PKR 75,000+',
   'Need guidance',
+];
+
+export const timelineOptions = [
+  'As soon as possible',
+  'Within 1–2 weeks',
+  'Within a month',
+  'Flexible',
+];
+
+export const contactReasons = [
+  {
+    title: 'Start a project',
+    desc: 'Tell us what you want to build.',
+    href: WA_DEFAULT,
+  },
+  {
+    title: 'Request a free consultation',
+    desc: 'Discuss your business goals and requirements.',
+    href: WA_QUOTE,
+  },
+  {
+    title: 'Explore AI solutions',
+    desc: 'Find out how AI can help your business.',
+    href: WA_AI,
+  },
 ];
